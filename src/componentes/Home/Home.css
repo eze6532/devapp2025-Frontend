@@ -1,0 +1,11 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-bottom: 1.5em;
+    background-color: #171717;
+    border-radius: 25px;
+    
+}

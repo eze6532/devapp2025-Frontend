@@ -1,0 +1,54 @@
+.tipoDeLetra{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.tipoDeLetra h1 {
+   
+    font-size:2rem;
+    color:darkblue;
+}
+button {
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: large;
+    background-color: aqua;
+}
+body{
+    background-color:rgba(68, 63, 63, 0.76);
+}
+.cargando {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;           
+    color: white; 
+}
+
+.puntos::after {
+    content: '';
+    display: inline-block;
+    animation: puntosAnim 1.2s steps(4, end) infinite;
+}
+
+@keyframes puntosAnim {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+}
+
+.menu-icono {
+    height: 30px;
+    cursor: pointer;
+}
+.menu-boton{
+    background-color: #cccccc;
+}
