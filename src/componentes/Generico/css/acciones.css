@@ -1,0 +1,29 @@
+.columna-aciones{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.boton-add{
+    background-color: rgb(9, 151, 9);
+}
+.boton-add:hover{
+    background-color: green;
+}
+.boton-ver{
+    background-color:rgba(80, 136, 255, 0.671) ;
+}
+.boton-ver:hover{
+    background-color:rgba(6, 46, 223, 0.671) ;
+}
+.boton-editar{
+    background-color: rgb(250, 250, 70);
+}
+.boton-editar:hover{
+    background-color: rgb(255, 251, 0);
+}
+.boton-borrar{
+    background-color: #ff3636;
+}
+.boton-borrar:hover{
+    background-color: #f10e0e;
+}

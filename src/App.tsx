@@ -1,24 +1,17 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import react from 'react';
-import './css/App.css';
-import Home from './componentes/Home/Home';
-import PersonasList from './componentes/Persona/PersonaList';
-import AutosList from './componentes/Auto/AutoList';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRouter } from './Router';
 import Estructura from './componentes/Estructura/Estructura';
+import React from 'react';
+import './css/App.css';
 
 
-
-const App: react.FC= ()=> {
-    return (
-      <BrowserRouter>
-      <Estructura />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/persona/lista" element={<PersonasList />} />
-          <Route path="/auto/lista" element={<AutosList />} />
-        </Routes>
-      </BrowserRouter>
-    );
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Estructura>
+        <AppRouter/>
+      </Estructura>
+    </BrowserRouter>
+  );
 };
-
 export default App;

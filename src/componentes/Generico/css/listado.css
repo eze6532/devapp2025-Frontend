@@ -1,0 +1,38 @@
+.listado-header{
+    text-align: center;
+    font-size: 2em;
+}
+
+.listado-tabla {
+    width: 100%;
+    overflow-x: auto;
+
+
+}
+.listado-tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #706d6dbd;
+
+    box-shadow: inset 2px 5px 10px rgba(212, 212, 212, 0.5);
+}
+
+.listado-tabla th,
+.listado-tabla td {
+    padding: 1em;
+    text-align: left;
+   
+}
+.listado-tabla th {
+    background-color: #333;
+    font-size: 1.2em;
+}
+
+.listado-tabla td {
+    background-color: #ffffff00;
+}
+
+.listado-tabla tr:hover td {
+    background-color: #333;
+}
+

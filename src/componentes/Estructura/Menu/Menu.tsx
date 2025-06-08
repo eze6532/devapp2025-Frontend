@@ -8,8 +8,8 @@ const Menu = ({ abierto, onClose }: { abierto: boolean, onClose:()=>void }) => {
         </button>
         <ul>
           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/persona/lista">Personas</Link></li>
-          <li><Link to="/auto/lista">Auto</Link></li>
+          <li><Link to="/personas/lista">Personas</Link></li>
+          <li><Link to="/autos/lista">Auto</Link></li>
         </ul>
       </nav>
     );

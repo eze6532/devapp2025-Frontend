@@ -1,11 +1,40 @@
-.home{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-left: 6em;
-    padding-right: 6em;
-    padding-bottom: 1.5em;
-    background-color: #171717;
-    border-radius: 25px;
-    
+.porton-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.porton-puerta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #444;
+  z-index: 2;
+  transform: translateY(0%);
+  transition: transform 2s ease;
+}
+
+.botones {
+  position: absolute;
+  z-index: 3;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+/* Estado inicial: portón abajo (cerrado) */
+.porton-container.cerrado .porton-puerta {
+    background: url('/img/fondo.png');
+  transform: translateY(0%);
+}
+
+/* Estado animado: portón sube (abriendo) */
+.porton-container.abierto .porton-puerta {
+    background: url('/img/fondo.png');
+  transform: translateY(-100%);
 }

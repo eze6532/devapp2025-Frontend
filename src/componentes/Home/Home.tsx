@@ -1,20 +1,40 @@
-import { Link } from "react-router-dom";
-import "./Home.css"
+import { useNavigate } from "react-router-dom";
+import "./Home.css";
+import { useState, useEffect } from "react";
 
-const Home= ()=>{
+const Home = () => {
+  const [abriendo, setAbriendo] = useState(false);
+  const [cerrado, setCerrado] = useState(true);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    setAbriendo(false);
+    setCerrado(true);
+  }, []);
 
-    return(
-        <div className = "home">
-            <h1>Inicio</h1>
-            <Link to='/persona/lista'>
-                <button>Personas</button>
-            </Link>
-            <Link to='/auto/lista'>
-                <button>Autos</button>
-            </Link>
+  const handleClick = (ruta: string) => {
+    setAbriendo(true);
+    setCerrado(false);
 
-        </div>
-    )
-}
+    setTimeout(() => {
+      navigate(ruta);
+    }, 2000); 
+  };
+
+  return (
+    <div
+      className={`porton-container ${abriendo ? "abierto" : ""} ${
+        cerrado ? "cerrado" : ""
+      }`}
+    >
+      <div className="porton-puerta"></div>
+      <div className="botones">
+        <h1>Inicio</h1>
+        <button onClick={() => handleClick("/personas/lista")}>Personas</button>
+        <button onClick={() => handleClick("/autos/lista")}>Autos</button>
+      </div>
+    </div>
+  );
+};
+
 export default Home;

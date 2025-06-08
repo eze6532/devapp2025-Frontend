@@ -1,0 +1,16 @@
+.contenedor-detalles{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem; 
+    padding: 1rem;
+}
+
+.detalles {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+

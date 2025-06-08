@@ -2,7 +2,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-.tipoDeLetra h1 {
+.tipoDeLetra h1,h2 {
    
     font-size:2rem;
     color:darkblue;
@@ -14,10 +14,13 @@ button {
     border-radius: 5px;
     font-weight: bolder;
     font-size: large;
-    background-color: aqua;
+    background-color: rgb(192, 197, 197);
+}
+button:hover{
+    background-color:rgb(163, 167, 167);
 }
 body{
-    background-color:rgba(68, 63, 63, 0.76);
+    background-color:rgba(214, 216, 80, 0.76);
 }
 .cargando {
     font-size: 1.5em;
@@ -51,4 +54,29 @@ body{
 }
 .menu-boton{
     background-color: #cccccc;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: #171717;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.1);
+  
+}
+.flip-horizontal {
+  color: #FFF;
+  background: #2196F3;
+  border-color: #2196F3;
+  transition: 0.5s ease;
+}
+
+.flip-horizontal:hover {
+  transform: rotateY(360deg);
+}
+button.flip-horizontal {
+  perspective: 1000px;
+  backface-visibility: hidden;
 }
