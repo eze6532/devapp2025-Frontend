@@ -4,26 +4,76 @@
     gap: 10px;
 }
 .boton-add{
-    background-color: rgb(9, 151, 9);
+    color: #FFF;
+    background:rgb(9, 151, 9);
+    transition: 0.5s ease;
 }
 .boton-add:hover{
-    background-color: green;
+    background-color: rgb(1, 102, 1);
+    transform: rotateY(360deg);
+}
+
+button.boton-add{
+  perspective: 1000px;
+  backface-visibility: hidden;
 }
 .boton-ver{
-    background-color:rgba(80, 136, 255, 0.671) ;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(80, 136, 255, 0.671);
+    background-image: url('/img/ojoCerrado.png'); /* OJO CERRADO */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .boton-ver:hover{
-    background-color:rgba(6, 46, 223, 0.671) ;
+    background-color: rgba(6, 46, 223, 0.671);
+    background-image: url('/img/ojoAbierto.png');
 }
 .boton-editar{
     background-color: rgb(250, 250, 70);
+    width: 40px;
+    height: 40px;
+    background-image: url('/img/libro-cerrado.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .boton-editar:hover{
+    background-image: url('/img/libro-abierto.png'); 
     background-color: rgb(255, 251, 0);
 }
 .boton-borrar{
     background-color: #ff3636;
+    width: 40px;
+    height: 40px;
+    background-image: url('/img/tachoCerrado.png'); /* OJO CERRADO */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 .boton-borrar:hover{
     background-color: #f10e0e;
+    background-image: url('/img/tachoAbierto.png');
+}
+
+.boton-duenio{
+    width: 40px;
+    height: 40px;
+    background-image: url('/img/Per_quieta.png'); /* OJO CERRADO */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+.boton-duenio:hover{
+
+    background-image: url('/img/Per_saltando.png');
 }

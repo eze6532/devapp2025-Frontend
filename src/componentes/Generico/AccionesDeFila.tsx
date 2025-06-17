@@ -15,12 +15,12 @@ const AccionesDeFila: React.FC<AccinesFilaProps>=({id,ondelete,basePath,accionEx
         <td>
             <span className="columna-acciones">
                 <Link to={`${basePath}/detalle/${id}`}>
-                    <button className="boton-ver">Ver</button>
+                    <button className="boton-ver"></button>
                 </Link>
                 <Link to={`${basePath}/editar-informacion/${id}`}>
-                    <button className="boton-editar">Editar</button>
+                    <button className="boton-editar"></button>
                 </Link>
-                    <button className="boton-borrar" onClick={()=>ondelete(id)}>Borrar</button>
+                    <button className="boton-borrar" onClick={()=>ondelete(id)}></button>
                 {accionExtra&&(
                     <>
                         {accionExtra(id)}

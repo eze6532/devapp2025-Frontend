@@ -5,7 +5,7 @@ import { Persona } from "../../tipos/Persona";
 import FormGenerico from "../Generico/FormGenerico";
 import api from "../../api/api";
 import { camposPersona } from "../../tipos/CampoPersona";
-
+import './css/persona.css'
 const PersonaEditar = () => {
   const { id } = useParams(); 
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const PersonaEditar = () => {
 
   const handleSave = async (newPersona: Persona) => {
     try {
-      const response = await api.post<Persona>("/persona7", newPersona); // ¿Debería ser PUT?
+      const response = await api.put<Persona>(`/persona/edit/${newPersona.id}`, newPersona); 
       console.log("Guardado con éxito:", response.data);
       alert("Persona actualizada");
       navigate("/personas/lista");
@@ -49,7 +49,7 @@ const PersonaEditar = () => {
   if (!persona) return <p>No se encontró la persona.</p>;
 
   return (
-    <div>
+    <div className="contenedor-personas" >
       <h2>Editar Persona</h2>
       <FormGenerico
         fields={camposPersona}

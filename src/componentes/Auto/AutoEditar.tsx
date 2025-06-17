@@ -4,7 +4,7 @@ import { Auto } from "../../tipos/Auto";
 import api from "../../api/api";
 import FormGenerico from "../Generico/FormGenerico";
 import { camposAuto } from "../../tipos/CampoAuto";
-
+import "./css/auto.css"
 
 const AutoEditar = () => {
   const { id } = useParams(); 
@@ -43,7 +43,7 @@ const AutoEditar = () => {
   if (!auto) return <p>No se encontró el auto.</p>;
 
   return (
-    <div>
+    <div className="contenedor-autos">
       <h2>Editar Auto</h2>
       <FormGenerico
         fields={camposAuto}

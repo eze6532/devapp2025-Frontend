@@ -3,11 +3,14 @@ import { Auto } from "../../tipos/Auto";
 import { camposAuto } from "../../tipos/CampoAuto";
 import FormGenerico from "../Generico/FormGenerico";
 import api from "../../api/api";
-import { useParams } from "react-router-dom";
-
+import { useNavigate, useParams } from "react-router-dom";
+import "./css/auto.css"
 
 
 export const AutoForm = () => {
+  const navigate= useNavigate();
+  const [mensaje, setMensaje] = useState<string | null>(null);
+  const [tipoMensaje, setTipoMensaje] = useState<'success' | 'danger' | null>(null);
   const { idDuenio } = useParams<{ idDuenio: string }>();
   const [auto,setAuto] = useState<Auto>({
     id:"",
@@ -50,18 +53,36 @@ export const AutoForm = () => {
     });
 
     console.log("Guardado con éxito:", response.data);
+    setMensaje('Auto guardado con éxito.');
+      setTipoMensaje('success');
+      
+      setTimeout(() => {
+        setMensaje(null);
+        setTipoMensaje(null);
+        navigate("/autos/lista")
+      }, 3000);
   } catch (error) {
     console.error("Error al guardar auto:", error);
+    setMensaje('Ocurrió un error al guardar la persona.');
+    setTipoMensaje('danger');
   }
 };
 
   return (
-    <FormGenerico<Auto>
-      fields={camposAuto}
-      data={auto}
-      onSave={onSave}
-      resetForm={()=>setAuto(autoReset)} 
-    />
+    <div className="contenedor-autos">
+      {mensaje && tipoMensaje && (
+        <div className={`alert alert-${tipoMensaje} mt-3`} role="alert">
+          {mensaje}
+        </div>
+      )}
+        <FormGenerico<Auto>
+          fields={camposAuto}
+          data={auto}
+          onSave={onSave}
+          resetForm={()=>setAuto(autoReset)} 
+        />
+    </div>
+    
   );
 };
 export default AutoForm;

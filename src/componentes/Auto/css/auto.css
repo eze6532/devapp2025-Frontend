@@ -1,0 +1,8 @@
+.contenedor-autos {
+  background: url('/img/garaje.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh; /* asegura que cubra toda la altura visible */
+  position: relative; /* permite posicionar contenido encima */
+  z-index: 0;
+  padding: 20px; /* opcional, para separación interna */
+}

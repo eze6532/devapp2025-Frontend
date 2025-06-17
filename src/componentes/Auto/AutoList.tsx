@@ -1,7 +1,8 @@
 import ListaGenerica from "../Generico/ListaGenerica";
 import { Auto } from "../../tipos/Auto";
 import BotonVerDuenio from "./BotonVerDuenio";
-import "./AutoList.css"
+import "./css/auto.css"
+import { camposAutoParcial } from "../../tipos/CampoAutoParcial";
 
 
 const AutoList = () => {
@@ -11,7 +12,7 @@ const AutoList = () => {
         <ListaGenerica<Auto>
           endpoint="/auto/"
           titulo="Autos"
-          columnas={["modelo", "patente", "anio", "marca"]}
+          columnas={camposAutoParcial}
           basePath="/auto"
           mostrarBotonAgregar={false}
           accionesExtras={(id) => <BotonVerDuenio idAuto={id} />}

@@ -1,40 +1,54 @@
 .menu-lateral {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Oculto por defecto */
-    width: 250px;
-    height: 100vh;
-    background-color: #1f1f1f;
-    padding-top: 60px; /* para que no tape el header */
-    transition: left 0.3s ease;
-    z-index: 1000;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .menu-lateral.abierto {
-    left: 0; /* Muestra el menú */
-  }
-  
-  .menu-lateral ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu-lateral li {
-    padding: 15px 20px;
-  }
-  
-  .menu-lateral a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: block;
-    transition: background-color 0.2s;
-  }
-  
-  .menu-lateral a:hover {
-    background-color: #333;
-    border-radius: 8px;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-lateral.abierto {
+  left: 0;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 60px 0 0 0; 
+  margin: 0;
+}
+
+.menu-lateral li {
+  padding: 15px 20px;
+}
+
+.menu-lateral a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.menu-lateral a:hover {
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.cerrar-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.cerrar-menu:hover {
+  color: #ff4444;
+}

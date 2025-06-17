@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import FormCampos from "./FormCampos";
 import { CampoConfig } from "../../tipos/CampoForm";
 import "../../css/App.css"
+import "./css/detalles.css"
 interface FormGenericoProps<T extends Record<string, unknown>> {
   fields: CampoConfig[];
   data: T;
@@ -11,6 +12,7 @@ interface FormGenericoProps<T extends Record<string, unknown>> {
 
 function FormGenerico<T extends Record<string, unknown>>({fields,data,onSave,resetForm}: FormGenericoProps<T>) {
   const [formData, setFormData] = useState<T>(data);
+  const [tipoMensaje, setTipoMensaje] = useState<'success' | 'danger' | null>(null);
 
   useEffect(() => {
     setFormData(data);
@@ -33,8 +35,8 @@ function FormGenerico<T extends Record<string, unknown>>({fields,data,onSave,res
   };
   
   return (
-    <div className="contenedor">
-      <form onSubmit={handleSubmit}>
+    <div className="contenedor-detalles">
+      <form onSubmit={handleSubmit} className="detalles">
         <FormCampos
           fields={fields}
           formData={formData}
